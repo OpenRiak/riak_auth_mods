@@ -17,6 +17,9 @@
 -module(riak_auth_mods_app).
 
 -behaviour(application).
+
+-dialyzer({no_unknown, start/2}).
+
 -export([start/2,
          stop/1]).
 
