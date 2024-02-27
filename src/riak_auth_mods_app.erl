@@ -18,7 +18,9 @@
 
 -behaviour(application).
 
+-if(?OTP_RELEASE >= 26).
 -dialyzer({no_unknown, start/2}).
+-endif.
 
 -export([start/2,
          stop/1]).
