@@ -24,8 +24,9 @@ jobs:
     steps:
       - uses: lukka/get-cmake@latest
       - uses: actions/checkout@v4
-      - name: Pre-Compile
+      - name: Apt update
         run: sudo apt-get update 
+      - name: Pre-Compile
         run: sudo apt-get install -y libpam0g-dev
       - name: Install Erlang/OTP
         uses: erlef/setup-beam@v1
